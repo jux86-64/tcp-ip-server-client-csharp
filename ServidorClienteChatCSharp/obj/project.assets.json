@@ -1,11 +1,37 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net6.0-windows7.0": {
+      "SimpleTCP/1.0.19": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SimpleTCP/1.0.19": {
+      "sha512": "pZI72B1/Eou+jmFY+sTq58R3n08A0O1QsJLZ+dZwzzh3aTsFFCxCC2KPRoRHTltXRr8Z7XGMYbd+hgGvfShRBw==",
+      "type": "package",
+      "path": "simpletcp/1.0.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleTCP.dll",
+        "simpletcp.1.0.19.nupkg.sha512",
+        "simpletcp.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net6.0-windows7.0": [
+      "SimpleTCP >= 1.0.17",
+      "System.Windows.Forms >= 4.8.0"
+    ]
   },
   "packageFolders": {
     "/home/ju/.nuget/packages/": {}
@@ -13,24 +39,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj",
+      "projectUniqueName": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj",
       "projectName": "ServidorClienteCSharp",
-      "projectPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj",
+      "projectPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj",
       "packagesPath": "/home/ju/.nuget/packages/",
-      "outputPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/obj/",
+      "outputPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ju/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net6.0-windows"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -46,8 +72,18 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "SimpleTCP": {
+            "target": "Package",
+            "version": "[1.0.17, )"
+          },
+          "System.Windows.Forms": {
+            "target": "Package",
+            "version": "[4.8.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -59,13 +95,65 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "ServidorClienteCSharp depends on SimpleTCP (>= 1.0.17) but SimpleTCP 1.0.17 was not found. An approximate best match of SimpleTCP 1.0.19 was resolved.",
+      "libraryId": "SimpleTCP",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package System.Windows.Forms with version (>= 4.8.0)\n  - Found 1 version(s) in nuget.org [ Nearest version: 4.0.0 ]",
+      "libraryId": "System.Windows.Forms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SimpleTCP 1.0.19' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SimpleTCP",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

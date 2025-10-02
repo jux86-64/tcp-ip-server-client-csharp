@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj": {}
+    "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj": {}
   },
   "projects": {
-    "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj": {
+    "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj",
+        "projectUniqueName": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj",
         "projectName": "ServidorClienteCSharp",
-        "projectPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/ServidorClienteCSharp.csproj",
+        "projectPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/ServidorClienteCSharp.csproj",
         "packagesPath": "/home/ju/.nuget/packages/",
-        "outputPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteCSharp/obj/",
+        "outputPath": "/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ju/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net6.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {}
           }
         },
@@ -40,8 +40,18 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "SimpleTCP": {
+              "target": "Package",
+              "version": "[1.0.17, )"
+            },
+            "System.Windows.Forms": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,12 +63,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/RuntimeIdentifierGraph.json"
         }
       }
     }

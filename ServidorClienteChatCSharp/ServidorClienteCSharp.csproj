@@ -6,10 +6,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="SimpleTCP" Version="1.0.17" />
+    <PackageReference Include="System.Windows.Forms" Version="4.8.0" />
   </ItemGroup>
 
 </Project>
