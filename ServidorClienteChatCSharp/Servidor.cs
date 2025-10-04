@@ -7,17 +7,17 @@ using System.Threading;
 
 public class Servidor
 {
-    private TcpOuvinte ouvinte;
-    private List<ClienteTcp> clientes = new List<ClienteTcp>();
+    private TcpListener ouvinte;
+    private List<TcpClient> clientes = new List<TcpClient>();
 
     public void Iniciar(int porta)
     {
-        ouvinte = new TcpOuvinte(IpAddress.Any, porta);
-        ouvinte.Iniciar();
+        ouvinte = new TcpListener(IpAddress.Any, porta);
+        ouvinte.Start();
         Console.WriteLine("Server Iniciado!!! Aguardando conexões... ");
 
         Thread aceitarThread = new Thread(AceitarClientes);
-        acceptThread.Iniciar();
+        aceitarThread.Start();
     }
 
     private void AceitarClientes()
@@ -26,12 +26,12 @@ public class Servidor
         {
             try
             {
-                ClienteTcp cliente = ouvinte.AceitarClienteTcp();
+                TcpClient cliente = ouvinte.AcceptTcpClient();
                 clientes.Add(cliente);
                 Console.WriteLine("Cliente Conectado");
 
                 Thread threadCliente = new Thread(() => ClienteTratado(cliente));
-                threadCliente.Iniciar;
+                threadCliente.Start();
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ public class Servidor
         }
     }
 
-    private void ClienteTratado(ClienteTcp cliente)
+    private void ClienteTratado(TcpClient cliente)
     {
         NetworkStream stream = cliente.GetStream();
         byte[] buffer = new byte[1024];
@@ -51,7 +51,7 @@ public class Servidor
             while ((bytesLidos = stream.Read(buffer, 0, buffer.Length)) > 0)
             {
                 string messagem = Encoding.UTF8.GetString(buffer, 0, bytesLidos);
-                console.WriteLine("Recebido: " + messagem);
+                Console.WriteLine("Recebido: " + messagem);
 
                 // Echo a mensagem de volta ao cliente
                 byte[] resposta = Encoding.UTF8.GetBytes("Echo: " + messagem);
@@ -72,7 +72,7 @@ public class Servidor
     }
 }
 
-class Program
+class ProgramServidor
 {
     static void Main()
     {

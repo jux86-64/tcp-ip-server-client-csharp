@@ -1,0 +1,6 @@
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.csproj.AssemblyReference.cache
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.AssemblyInfoInputs.cache
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.AssemblyInfo.cs
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.csproj.CoreCompileInputs.cache
+/home/ju/Documents/estudo-dotnet/tcp-ip-server-client-csharp/ServidorClienteChatCSharp/obj/Debug/net6.0-windows/ServidorClienteCSharp.sourcelink.json
